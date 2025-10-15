@@ -1,0 +1,25 @@
+<!-- O pagină web care schimbă culoarea de fundal când apeși un buton -->
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schimbă culoarea de fundal</title>
+    <style>
+        body {
+            transition: background-color 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Schimbă culoarea de fundal</h1>
+    <button id="schimbaCuloarea">Schimbă culoarea</button>
+
+    <script>
+        const buton = document.getElementById('schimbaCuloarea');
+        buton.addEventListener('click', () => {
+            document.body.style.backgroundColor = document.body.style.backgroundColor === 'blue' ? 'green' : 'blue';
+        });
+    </script>
+</body>
+</html>
