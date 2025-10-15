@@ -1,25 +1,43 @@
-<!-- O pagină web care schimbă culoarea de fundal când apeși un buton -->
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schimbă culoarea de fundal</title>
-    <style>
-        body {
-            transition: background-color 0.5s;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextCafe</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Schimbă culoarea de fundal</h1>
-    <button id="schimbaCuloarea">Schimbă culoarea</button>
+  <header>
+    <h1>NextCafe</h1>
+    <p>Specialty coffee & vibe cozy, în culori de bej și maro.</p>
+  </header>
 
-    <script>
-        const buton = document.getElementById('schimbaCuloarea');
-        buton.addEventListener('click', () => {
-            document.body.style.backgroundColor = document.body.style.backgroundColor === 'blue' ? 'green' : 'blue';
-        });
-    </script>
+  <main class="container">
+    <div class="hero" role="img" aria-label="Imagine reprezentativă pentru NextCafe">
+      <span>Placeholder imagine cafenea</span>
+    </div>
+
+    <section class="menu" aria-labelledby="meniu-titlu">
+      <h2 id="meniu-titlu">Meniu</h2>
+      <ul class="produse">
+        <li class="produs">
+          <span class="nume">Espresso dublu</span>
+          <span class="detalii">intens & aromatic</span>
+        </li>
+        <li class="produs">
+          <span class="nume">Cappuccino</span>
+          <span class="detalii">spumă catifelată</span>
+        </li>
+        <li class="produs">
+          <span class="nume">Cold Brew</span>
+          <span class="detalii">răcoritor & smooth</span>
+        </li>
+      </ul>
+
+      <p class="adresa">
+        Ne găsiți pe <strong>Calea Șerban Vodă, nr 140</strong>.
+      </p>
+    </section>
+  </main>
 </body>
 </html>
