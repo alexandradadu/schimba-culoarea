@@ -1,0 +1,117 @@
+/* === Stiluri generale pentru pagina NextCafe === */
+
+:root {
+  --maro: #6b4f3a;
+  --bej: #f5efe6;
+  --bej-deschis: #fff8ef;
+}
+
+/* Reset & fonturi de bază */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bej);
+  color: var(--maro);
+  line-height: 1.6;
+}
+
+/* === HEADER === */
+header {
+  background-color: var(--maro);
+  color: var(--bej-deschis);
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin: 0.5rem 0 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* === CONTAINER PRINCIPAL === */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* === Imagine Placeholder === */
+.hero {
+  border: 3px dashed rgba(107, 79, 58, 0.3);
+  background: repeating-linear-gradient(
+    45deg,
+    #f7f0e7 0 10px,
+    #f1e7da 10px 20px
+  );
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 1.5rem;
+}
+
+.hero span {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: var(--maro);
+}
+
+/* === MENIU === */
+.menu {
+  background: var(--bej-deschis);
+  border: 1px solid rgba(107, 79, 58, 0.15);
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 12px rgba(107, 79, 58, 0.1);
+}
+
+.menu h2 {
+  margin-top: 0;
+  border-bottom: 2px solid rgba(107, 79, 58, 0.15);
+  padding-bottom: 0.5rem;
+}
+
+/* Lista de produse */
+ul.produse {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.produs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(107, 79, 58, 0.12);
+}
+
+.produs .nume {
+  font-weight: 600;
+}
+
+.adresa {
+  margin-top: 1.5rem;
+  font-style: italic;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(107, 79, 58, 0.12);
+}
