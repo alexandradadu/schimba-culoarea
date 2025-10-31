@@ -1,43 +1,32 @@
+<!-- O pagină web care schimbă culoarea de fundal când apeși un buton -->
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NextCafe</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schimbare Culoare Fundal</title>
+    <style>
+        body {
+            transition: background-color 0.5s;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>NextCafe</h1>
-    <p>Specialty coffee & vibe cozy, în culori de bej și maro.</p>
-  </header>
+    <button id="changeColorBtn">Schimbă Culoarea Fundalului</button>
 
-  <main class="container">
-    <div class="hero" role="img" aria-label="Imagine reprezentativă pentru NextCafe">
-      <span>Placeholder imagine cafenea</span>
-    </div>
+    <script>
+        const colors = ['#FF5733', '#33FF57', '#3357FF', '#F333FF', '#33FFF5', '#F5FF33'];
+        const button = document.getElementById('changeColorBtn');
 
-    <section class="menu" aria-labelledby="meniu-titlu">
-      <h2 id="meniu-titlu">Meniu</h2>
-      <ul class="produse">
-        <li class="produs">
-          <span class="nume">Espresso dublu</span>
-          <span class="detalii">intens & aromatic</span>
-        </li>
-        <li class="produs">
-          <span class="nume">Cappuccino</span>
-          <span class="detalii">spumă catifelată</span>
-        </li>
-        <li class="produs">
-          <span class="nume">Cold Brew</span>
-          <span class="detalii">răcoritor & smooth</span>
-        </li>
-      </ul>
-
-      <p class="adresa">
-        Ne găsiți pe <strong>Calea Șerban Vodă, nr 140</strong>.
-      </p>
-    </section>
-  </main>
+        button.addEventListener('click', () => {
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        });
+    </script>
 </body>
 </html>
